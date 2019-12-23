@@ -1,0 +1,83 @@
+﻿@model SQLiteFTS5Example.Models.Songs
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Songs</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TrackId" class="control-label"></label>
+                <input asp-for="TrackId" class="form-control" />
+                <span asp-validation-for="TrackId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SongId" class="control-label"></label>
+                <input asp-for="SongId" class="form-control" />
+                <span asp-validation-for="SongId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Release" class="control-label"></label>
+                <input asp-for="Release" class="form-control" />
+                <span asp-validation-for="Release" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ArtistId" class="control-label"></label>
+                <input asp-for="ArtistId" class="form-control" />
+                <span asp-validation-for="ArtistId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ArtistMbid" class="control-label"></label>
+                <input asp-for="ArtistMbid" class="form-control" />
+                <span asp-validation-for="ArtistMbid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ArtistName" class="control-label"></label>
+                <input asp-for="ArtistName" class="form-control" />
+                <span asp-validation-for="ArtistName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Duration" class="control-label"></label>
+                <input asp-for="Duration" class="form-control" />
+                <span asp-validation-for="Duration" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ArtistFamiliarity" class="control-label"></label>
+                <input asp-for="ArtistFamiliarity" class="form-control" />
+                <span asp-validation-for="ArtistFamiliarity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ArtistHotttnesss" class="control-label"></label>
+                <input asp-for="ArtistHotttnesss" class="form-control" />
+                <span asp-validation-for="ArtistHotttnesss" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Year" class="control-label"></label>
+                <input asp-for="Year" class="form-control" />
+                <span asp-validation-for="Year" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
